@@ -4,16 +4,20 @@ import Logo from '../../assets/img/Logo.png';
 //import ButtonLink from './components/ButtonLink';
 import Button from '../Button';
 import {LogoImage, MenuWrapper} from './style.js';
+import { Link } from 'react-router-dom';
 
 function Menu(){
     return(
         <MenuWrapper className="Menu">
-            <a href="/"> 
+            <Link to="/"> 
                 <LogoImage src={Logo} alt="Aluraflix logo"/>
-            </a> 
-            <Button as="a" className="ButtonLink" href="/">
+            </Link>
+            <Button as={Link} className="ButtonLink" to="/cadastro/video/">
                 Novo vídeo
-            </Button>          
+            </Button> 
+            {/* <Button as="a" className="ButtonLink" href="/">
+                Novo vídeo
+            </Button>           */}
         </MenuWrapper>
     );
 }
