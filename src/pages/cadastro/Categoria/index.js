@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
 import Button from '../../../components/Button';
+import useForm from '../../../hooks/useForm';
 
 function CadastroCategoria() {
   const valuesInit = {
@@ -10,19 +11,9 @@ function CadastroCategoria() {
     descricao: '',
     cor: '#000000',
   };
-  const [values, setValues] = useState(valuesInit);
+  const { handleChangeValue, clearForm, values } = useForm(valuesInit);
+
   const [categorias, setCategorias] = useState([]);
-
-  function setValue(name, value) {
-    setValues({
-      ...values,
-      [name]: value,
-    });
-  }
-
-  function handleChangeValue(e) {
-    setValue(e.target.getAttribute('name'), e.target.value);
-  }
 
   useEffect(() => {
     const URL = 'http://localhost:8080/categorias';
@@ -45,7 +36,7 @@ function CadastroCategoria() {
           ...categorias,
           values,
         ]);
-        setValues(valuesInit);
+        clearForm();
       }}
       >
         <div>
@@ -54,7 +45,6 @@ function CadastroCategoria() {
             label="Nome da Categoria:"
             value={values.nome}
             name="nome"
-            type="text"
             onChange={handleChangeValue}
           />
 
@@ -118,7 +108,7 @@ function CadastroCategoria() {
       <ul>
         {categorias.map((cat, i) => (
           <li key={`${cat}_${i}`}>
-            {cat.nome}
+            {cat.titulo}
           </li>
         ))}
 

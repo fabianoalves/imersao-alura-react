@@ -1,16 +1,82 @@
 {
-    "categorias":[
-        {
-            "id": 1,
-            "nome":"Front End",
-            "descricao": "Uma categoria bacana",
-            "cor": "#cbd1ff"
-        },
-        {
-            "id": 2,
-            "nome":"Back End",
-            "descricao": "Uma categoria bacana",
-            "cor": "red"
-        }
-    ]
+  "categorias": [
+    {
+      "id": 1,
+      "titulo": "Front End",
+      "descricao": "Uma categoria bacana",
+      "cor": "#cbd1ff"
+    },
+    {
+      "id": 2,
+      "titulo": "Back End",
+      "descricao": "Uma categoria bacana",
+      "cor": "red"
+    }
+  ],
+  "videos": [
+    {
+      "id": 1,
+      "categoriaId": 1,
+      "titulo": "Nota 200",
+      "url": "https://www.youtube.com/watch?v=u0A5Opejy2k"
+    },
+    {
+      "id": 2,
+      "categoriaId": 1,
+      "titulo": "Nando Moura",
+      "url": "https://www.youtube.com/watch?v=3PnJofc0UPw"
+    },
+    {
+      "id": 3,
+      "categoriaId": 1,
+      "titulo": "Nota 200 - 2",
+      "url": "https://www.youtube.com/watch?v=u0A5Opejy2k"
+    },
+    {
+      "id": 4,
+      "categoriaId": 2,
+      "titulo": "Love Yourself",
+      "url": "https://www.youtube.com/watch?v=oyEuk8j8imI&feature=emb_rel_pause"
+    },
+    {
+      "id": 5,
+      "categoriaId": 2,
+      "titulo": "Nota 200 - 3",
+      "url": "https://www.youtube.com/watch?v=u0A5Opejy2k"
+    },
+    {
+      "titulo": "Teste",
+      "url": "https://www.youtube.com/watch?v=FlISMSJoai8",
+      "categoriaId": 1,
+      "id": 6
+    },
+    {
+      "titulo": "teste 2",
+      "url": "https://www.youtube.com/watch?v=FlISMSJoai8",
+      "categoriaId": {
+        "id": 1,
+        "titulo": "Front End",
+        "descricao": "Uma categoria bacana",
+        "cor": "#cbd1ff"
+      },
+      "id": 7
+    },
+    {
+      "titulo": "teste 2",
+      "url": "https://www.youtube.com/watch?v=oyEuk8j8imI&feature=emb_rel_pause",
+      "categoriaId": {
+        "id": 1,
+        "titulo": "Front End",
+        "descricao": "Uma categoria bacana",
+        "cor": "#cbd1ff"
+      },
+      "id": 8
+    },
+    {
+      "titulo": "teste 2",
+      "url": "https://www.youtube.com/watch?v=3PnJofc0UPw",
+      "categoriaId": 1,
+      "id": 9
+    }
+  ]
 }
