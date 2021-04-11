@@ -25,3 +25,5 @@ function getAll() {
 export default {
   getAllWithVideos, getAll,
 };
+
+//teste
